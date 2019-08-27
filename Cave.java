@@ -12,11 +12,23 @@ public class Cave {
     private Caveman cman;
     private Bomb bomb;
     private Potion potion;
+    private int width, height;
+    private final int MAX_WIDTH = 50, MAX_HEIGHT = 50;
     
-    public Cave() {
-        cman = new Caveman();
-        bomb = new Bomb();
-        potion = new Potion();
+    public Cave(String username) {
+        this.width = (int) (Math.random() * MAX_WIDTH);
+        this.height = (int) (Math.random() * MAX_HEIGHT);
+        cman = new Caveman(username, this);
+        bomb = new Bomb(this);
+        potion = new Potion(this);
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
     
 }

@@ -9,5 +9,14 @@
  * @author jword
  */
 public class Potion {
+
+    private int x, y;
+    private final int strength;
+
+    public Potion(Cave cave) {
+        this.x = (int)(Math.random() * cave.getWidth());
+        this.y = (int)(Math.random() * cave.getHeight());
+        this.strength = (int)(Math.random() * 100);
+    }
     
 }
