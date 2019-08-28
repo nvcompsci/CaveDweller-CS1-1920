@@ -31,4 +31,23 @@ public class Cave {
         return height;
     }
     
+    public void checkCollisions() {
+        
+    }
+
+    public void processPrompt(String prompt) {
+        if (prompt.equals("move right")) {
+            cman.move(1,0);
+        }
+        else if (prompt.equals("move left")) {
+            cman.move(-1,0);
+        }
+        else if (prompt.equals("move forward")) {
+            cman.move(0,1);
+        }
+        else if (prompt.equals("move back")) {
+            cman.move(0,-1);
+        }                
+    }
+    
 }

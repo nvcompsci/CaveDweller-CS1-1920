@@ -19,4 +19,17 @@ public class Caveman {
         this.y = (int)(Math.random() * cave.getHeight());
         this.health = (int)(Math.random() * 100);
     }
+    
+    public void move(int dx, int dy) {
+        x += dx;
+        y += dy;
+    }
+    
+    public void drink(Potion p) {
+        
+    }
+    
+    public void detonate(Bomb b) {
+         
+    }
 }

@@ -12,6 +12,12 @@ public class CaveDwellerApp {
         System.out.println("What is your caveman's name?");
         String username = kb.nextLine();
         Cave cave = new Cave(username);
+        String prompt = "";
+        while(!prompt.equals("close")) {
+            prompt = kb.nextLine();
+            cave.processPrompt(prompt);
+        }
+        
     }
     
 }
