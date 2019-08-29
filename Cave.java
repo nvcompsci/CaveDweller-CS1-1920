@@ -32,7 +32,12 @@ public class Cave {
     }
     
     public void checkCollisions() {
-        
+        if (cman.getX() == bomb.getX() && cman.getY() == bomb.getY()) {
+            cman.detonate(bomb);
+        }
+        else if (cman.getX() == potion.getX() && cman.getY() == potion.getY()) {
+            cman.drink(potion);
+        }
     }
 
     public void processPrompt(String prompt) {

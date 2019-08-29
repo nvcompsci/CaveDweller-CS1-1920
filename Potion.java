@@ -18,5 +18,17 @@ public class Potion {
         this.y = (int)(Math.random() * cave.getHeight());
         this.strength = (int)(Math.random() * 100);
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
     
 }

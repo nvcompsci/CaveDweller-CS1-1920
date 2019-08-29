@@ -19,6 +19,14 @@ public class Caveman {
         this.y = (int)(Math.random() * cave.getHeight());
         this.health = (int)(Math.random() * 100);
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
     
     public void move(int dx, int dy) {
         x += dx;
@@ -26,10 +34,17 @@ public class Caveman {
     }
     
     public void drink(Potion p) {
-        
+        health += p.getStrength();
+        System.out.println("drank potion");
     }
     
     public void detonate(Bomb b) {
-         
+        health -= b.getStrength();
+        System.out.println("detonated bomb");
+        if (this.health <= 0) {
+            System.out.println("Goodbye cruel world.");
+            //exit(0) indicates successful, exit(1) unsuccesful
+            System.exit(0);
+        }
     }
 }
