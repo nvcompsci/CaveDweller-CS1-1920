@@ -13,7 +13,7 @@ public class Cave {
     private Bomb bomb;
     private Potion potion;
     private int width, height;
-    private final int MAX_WIDTH = 50, MAX_HEIGHT = 50;
+    private final int MAX_WIDTH = 10, MAX_HEIGHT = 10;
     
     public Cave(String username) {
         this.width = (int) (Math.random() * MAX_WIDTH);
@@ -52,7 +52,8 @@ public class Cave {
         }
         else if (prompt.equals("move back")) {
             cman.move(0,-1);
-        }                
+        }
+        checkCollisions();
     }
     
 }
